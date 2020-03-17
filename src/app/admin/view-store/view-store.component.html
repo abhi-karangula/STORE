@@ -3,16 +3,27 @@
     <table class="table table-hover">
       <tr>
         <th>Name</th>
-        <th>Address</th>
+        <th>Locality</th>
+        <th>Area</th>
         <th>Landmark</th>
-        <th>Remove</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Action</th>
       </tr>
       <tr *ngFor="let store of storeList">
         <td>{{store.name}}</td>
-        <td>{{store.locality}},{{store.area}},{{store.city}}</td>
+        <td>{{store.locality}}</td>
+        <td>{{store.area}}</td>
         <td>{{store.landmark}}</td>
-        <!--(click)="deleteStore(store.id)" -->
-        <td><i class="material-icons">
+        <td>{{store.city}}</td>
+        <td>{{store.state}}</td>
+        <td>{{store.pin}}</td>
+        <td>
+          <i class="material-icons" (click)="editStore(store.id)">
+            edit
+          </i>&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="material-icons" (click)="deleteStore(store.id)">
           clear
           </i></td>
       </tr>
