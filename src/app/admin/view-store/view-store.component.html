@@ -1,0 +1,21 @@
+<div class="container container-height">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Landmark</th>
+        <th>Remove</th>
+      </tr>
+      <tr *ngFor="let store of storeList">
+        <td>{{store.name}}</td>
+        <td>{{store.locality}},{{store.area}},{{store.city}}</td>
+        <td>{{store.landmark}}</td>
+        <!--(click)="deleteStore(store.id)" -->
+        <td><i class="material-icons">
+          clear
+          </i></td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.card-padding {
+    padding: 20px;
+    background-color: lightgray;
+}
+.card-padding > .row {
+    margin-bottom: 20px;
+}
+input::placeholder {
+    padding-left: 10px;
+}

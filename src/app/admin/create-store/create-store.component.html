@@ -1,0 +1,43 @@
+<div class="container container-height">
+  <form [formGroup]="storeForm" class="card card-padding">
+    <div class="form-group row">
+      <div class="col-4">
+        <input type="text" id="name" class="form-control form-rounded" formControlName="name" placeholder="Name" size="35">
+        <div *ngIf="storeForm?.get('name').dirty && storeForm?.get('name')?.hasError('required')">Name is required</div>
+      </div>
+      <div class="col-4">
+        <input type="text" id="area" class="form-control form-rounded" formControlName="area" placeholder="Area" size="35">
+        <div *ngIf="storeForm?.get('area').dirty && storeForm?.get('area')?.hasError('required')">Area is required</div>
+      </div>
+      <div class="col-4">
+        <input type="text" id="city" class="form-control form-rounded" formControlName="city" placeholder="City" size="35">
+        <div *ngIf="storeForm?.get('city').dirty && storeForm?.get('city')?.hasError('required')">City is required</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <input type="text" id="state" class="form-control form-rounded" formControlName="state" placeholder="State" size="35">
+        <div *ngIf="storeForm?.get('state').dirty && storeForm?.get('state')?.hasError('required')">State is required</div>
+      </div>
+      <div class="col-4">
+        <input type="text" id="pin" class="form-control form-rounded" formControlName="pin" placeholder="PIN" size="35">
+        <div *ngIf="storeForm?.get('pin').dirty && storeForm?.get('pin')?.hasError('required')">PIN is required</div>
+      </div>
+      <div class="col-4">
+        <input type="text" id="locality" class="form-control form-rounded" formControlName="locality" placeholder="Locality" size="35">
+        <div *ngIf="storeForm?.get('locality').dirty && storeForm?.get('locality')?.hasError('required')">Locality is required</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <input type="text" id="landmark" class="form-control form-rounded" formControlName="landmark" placeholder="Landmark" size="35">
+        <div *ngIf="storeForm?.get('landmark').dirty && storeForm?.get('landmark')?.hasError('required')">Landmark is required</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" (click)="create()">Create Store</button>
+      </div>
+    </div>
+  </form>
+</div>
